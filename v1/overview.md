@@ -1,4 +1,4 @@
-> **Notice**: API v1 is deprecated, has no official support, and will be no longer usable soon.
+> **Notice**: API v1 is deprecated, has no official support, and will be no longer usable soon. It uses a deprecated API key system which has been replaced by OAuth2 access tokens in `v2`.
 
 > Base URL: https://api.nerdbot.tv/1.0
 
