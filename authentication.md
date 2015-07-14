@@ -2,7 +2,7 @@
 NerdBot uses OAuth2 for authentication. All requests follow the exact OAuth2 standards, but we'll still give some examples here.
 
 ## Making an app
-To make authenticated requests, you must first [make an app](https://nerdbot.tv/apps/new).
+To make authenticated requests, you must first [make an app](https://nerdbot.tv/api/apps/new).
 Once you create an app, copy your client ID and generate a secret.
 Make sure to copy the secret somewhere safe and **keep it private**.
 
