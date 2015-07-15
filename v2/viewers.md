@@ -6,8 +6,8 @@ Viewers are people that have entered a [User](users.md)'s chat. Some chatters ma
 |[GET /users/:user/viewers/:viewer](#get-usersuserviewersviewer)|Gets the `:viewer` of `:user`.|
 |[PATCH /users/:user/viewers/:viewer](#patch-usersuserviewersviewer)|Updates data for the `:viewer` of `:user`.|
 
-## `GET /users/:user/viewers/:viewer
-Gets the `:viewer` of `:user`.
+## `GET /users/:user/viewers/:viewer`
+Gets the `:viewer` of `:user`. Requires a valid [access token](../authentication.md) with scope `manage_xp`.
 #### Example Request
     GET https://api.nerdbot.tv/v2/users/test_user/viewers/test_viewer
 #### Example Response
@@ -17,8 +17,8 @@ Gets the `:viewer` of `:user`.
       "xp": 1000,
       "time_watched": "PT5H20M"
     }
-## `PATCH /users/:user/viewers/:viewer
-Updates data for the `:viewer` of `:user`.
+## `PATCH /users/:user/viewers/:viewer`
+Updates data for the `:viewer` of `:user`. Requires a valid [access token](../authentication.md) with scope `manage_xp`.
 
 |Parameter|Optional|Type|Description|
 |---|---|---|---|
