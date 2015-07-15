@@ -4,8 +4,8 @@ These are someone who has connected with Twitch on the NerdBot dashboard.
 
 |Endpoint|Description|
 |---|---|
-|[GET /users/:user](#get-usersuser)|Gets a user's bot options.|
-|[PATCH /users/:user](#patch-usersuser)|Sets option(s) for a user.|
+|[GET /users/:user](#get-usersuser)|Gets a user's bot options|
+|[PATCH /users/:user](#patch-usersuser)|Sets option(s) for a user|
 
 ## `GET /users/:user`
 Gets a user's bot options. Some details will be hidden without a valid [access token](../authentication.md) with scope `user_details`.
