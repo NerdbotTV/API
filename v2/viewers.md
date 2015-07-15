@@ -23,7 +23,7 @@ Updates data for the `:viewer` of `:user`.
 |Parameter|Optional|Type|Description|
 |---|---|---|---|
 |xp|yes|int|The total XP points of the viewer|
-|time_watched|yes|bool|The time the viewer has watched user's channel (ISO-8601)|
+|time_watched|yes|bool|The time the viewer has watched user's channel|
 
 #### Example Request
     PATCH https://api.nerdbot.tv/v2/users/test_user/viewers/test_viewer
