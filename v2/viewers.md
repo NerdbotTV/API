@@ -4,7 +4,7 @@ Viewers are people that have entered a [User](users.md)'s chat. Some chatters ma
 |Endpoint|Description|
 |---|---|
 |[GET /users/:user/viewers/:viewer](#get-usersuserviewersviewer)|Gets the `:viewer` of `:user`.|
-|[PATCH /users/:user/viewers/:viewer](#get-usersuserviewersviewer)|Updates data for the `:viewer` of `:user`.|
+|[PATCH /users/:user/viewers/:viewer](#patch-usersuserviewersviewer)|Updates data for the `:viewer` of `:user`.|
 
 ## `GET /users/:user/viewers/:viewer
 Gets the `:viewer` of `:user`.
