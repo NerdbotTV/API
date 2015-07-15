@@ -22,7 +22,7 @@ Gets a user's bot options. Some options will be hidden without a valid [access t
     }
     
 ## `PATCH /users/:user`
-Sets option(s) for a user. Requires a valid [access token](../authentication.md) with scope `manage_bot`.
+Sets option(s) for a user. Requires a valid [access token](../authentication.md) with scope `user_details`.
 
 |Parameter|Optional|Type|Description|
 |---|---|---|---|
