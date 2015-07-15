@@ -1,4 +1,4 @@
-## Overview
+# Authentication
 NerdBot uses OAuth2 for authentication. All requests follow the exact OAuth2 standards, but we'll still give some examples here.
 
 ## Making an app
