@@ -5,7 +5,8 @@ Endpoint|Description
 ---|---
 [GET /users/:user/commands](#get-usersusercommands)|Gets all commands for `:user`
 [GET /users/:user/commands/:name](#get-usersusercommandsname)|Gets the command `:name` from `:user`
-[PUT /users/:user/commands/:name](#put-usersusercommandsname)|Adds the command `:name` for `:user`
+[PUT /users/:user/commands/:name](#put-usersusercommandsname)|Adds the command `:name` to `:user`
+[PATCH /users/:user/commands/:name](#patch-usersusercommandsname)|Updates the command `:name` from `:user`
 [DELETE /users/:user/commands/:name](#delete-usersusercommandsname)|Deletes the command `:name` from `:user`
 
 ## `GET /users/:user/commands`
@@ -39,7 +40,7 @@ Gets the command `:name` from `:user`. Command variables will be masked without 
     }
 
 ## `PUT /users/:user/commands/:name`
-Adds the command `:name` for `:user`. Requires a valid [access token](../authentication.md) with scope `manage_commands`.
+Adds the command `:name` to `:user`. Requires a valid [access token](../authentication.md) with scope `manage_commands`.
 
 Parameter|Optional|Type|Description
 ---|---|---|---
@@ -55,6 +56,27 @@ allow_for|no|string|Who can use the command (all/subs/mods)
       "id": 24,
       "name": "!test2",
       "uses": 0,
+      "allow_for": "all",
+      "response": "This is the second test"
+    }
+
+## `PATCH /users/:user/commands/:name`
+Updates the command `:name` from `:user`. Requires a valid [access token](../authentication.md) with scope `manage_commands`.
+
+Parameter|Optional|Type|Description
+---|---|---|---
+response|yes|string|The command's response
+allow_for|yes|string|Who can use the command (all/subs/mods)
+uses|yes|int|The amount of times the command has been used
+
+#### Example Request
+    PATCH https://api.nerdbot.tv/v2/users/test_user/commands/!test2
+            uses=1
+#### Example Response
+    {
+      "id": 24,
+      "name": "!test2",
+      "uses": 1,
       "allow_for": "all",
       "response": "This is the second test"
     }
