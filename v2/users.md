@@ -8,7 +8,7 @@ These are someone who has connected with Twitch on the NerdBot dashboard.
 |[PATCH /users/:user](#patch-usersuser)|Sets option(s) for a user.|
 
 ## `GET /users/:user`
-Gets a user's bot options. Some options will be hidden without a valid [access token](../authentication.md) with scope `manage_bot`.
+Gets a user's bot options. Some details will be hidden without a valid [access token](../authentication.md) with scope `user_details`.
 
 #### Example Request
     GET https://api.nerdbot.tv/v2/users/test_user
@@ -22,7 +22,7 @@ Gets a user's bot options. Some options will be hidden without a valid [access t
     }
     
 ## `PATCH /users/:user`
-Sets option(s) for a user. Requires a valid [access token](../authentication.md) with scope `user_details`.
+Sets option(s) for a user. Requires a valid [access token](../authentication.md) with scope `manage_bot`.
 
 |Parameter|Optional|Type|Description|
 |---|---|---|---|
