@@ -39,10 +39,22 @@ Gets a user's bot options. Some details will be hidden without a valid [access t
 Sets option(s) for a user. Requires a valid [access token](../authentication.md) with scope `manage_bot`.
 
 |Parameter|Optional|Type|Description|
-|---|---|---|---|
-|volume|yes|int|Volume of song requests (0-100)|
-|enabled|yes|bool|Whether or not the bot is enabled for the user|
-|timer_length|yes|string|Length between timers in ISO-8601 interval format|
+---|---|---|---
+volume|yes|int|Volume of song requests (0-100)
+enabled|yes|bool|Whether or not the bot is enabled for the user
+timer_length|yes|string|Length between timers in ISO-8601 interval format
+thank_followers|yes|bool|Whether or not new followers should be thanked in chat
+timeout_notice_type|yes|string|Where to put timeout notices (`chat`, `whisper`, or `none`.)
+timeout_length|yes|string|The length of the timeout in ISO-8601 interval format.
+sub_message|yes|string|Message sent upon new subscribers.
+resub_message|yes|string|Message sent upon a subscriber's monthly anniversary
+max_caps|yes|int|How many capital letters may be used in a row
+max_emotes|yes|int|How many emotes may be used in a message
+allow_links|yes|string|Who can post links (`all`, `subs`, or just `mods`.)
+xp_enabled|yes|bool|Whether or not users gain XP.
+xp_payout|yes|int|How much XP is paid out.
+xp_payout_length|yes|string|Interval between payouts.
+xp_for_song|yes|int|XP count required for a song request. 0 to disable.
 
 #### Example Request
     PATCH https://api.nerdbot.tv/v2/users/1
