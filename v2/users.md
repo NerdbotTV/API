@@ -11,16 +11,30 @@ These are someone who has connected with Twitch on the NerdBot dashboard.
 Gets a user's bot options. Some details will be hidden without a valid [access token](../authentication.md) with scope `user_details`.
 
 #### Example Request
-    GET https://api.nerdbot.tv/v2/users/test_user
+    GET https://api.nerdbot.tv/v2/users/1
 #### Example Response
-    {
-      "name": "test_user",
-      "display_name": "Test_User",
-      "enabled": true,
-      "volume": 50,
-      "timer_length": "PT5M"
-    }
-    
+```JSON
+{
+  "id": 1,
+  "name": "test_user",
+  "display_name": "Test_User",
+  "enabled": true,
+  "volume": 50,
+  "timer_length": "PT5M",
+  "thank_followers": true,
+  "timeout_notice_type": "chat",
+  "timeout_length": "PT30S",
+  "sub_message": "Thank you for subscribing, {sub}!",
+  "resub_message": "Thanks {sub} for {months} months of subscribing!",
+  "max_caps": 0,
+  "max_emotes": 0,
+  "allow_links": "subs",
+  "xp_enabled": true,
+  "xp_payout": 10,
+  "xp_payout_length": "PT5M",
+  "xp_for_song": 20
+}
+```
 ## `PATCH /users/:user`
 Sets option(s) for a user. Requires a valid [access token](../authentication.md) with scope `manage_bot`.
 
@@ -31,14 +45,14 @@ Sets option(s) for a user. Requires a valid [access token](../authentication.md)
 |timer_length|yes|string|Length between timers in ISO-8601 interval format|
 
 #### Example Request
-    PATCH https://api.nerdbot.tv/v2/users/test_user
+    PATCH https://api.nerdbot.tv/v2/users/1
             volume=25
             &timer_length=PT1H
 #### Example Response
-    {
-      "name": "test_user",
-      "display_name": "Test_User",
-      "enabled": true,
-      "volume": 25,
-      "timer_length": "PT1H"
-    }
+```JSON
+{
+  "volume": 25,
+  "timer_length": "PT1H"
+  ...
+}
+```
