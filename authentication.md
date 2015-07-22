@@ -71,11 +71,11 @@ To use the Implicit Grant Flow (e.g. for JavaScript-only apps), follow these ste
 ### Scopes
 |Scope|Description|
 |---|---|
-|user_details|Allows you to view the user's email address (and probably more soon)|
-|manage_bot|Allows you to view/edit the user's bot options and have it join/leave the user's channel|
-|manage_commands|Allows you to add/edit/remove the user's commands|
-|manage_xp|Allows you to add/edit/subtract XP from the user's viewers|
-|manage_songs|Allows you to request/delete/promote song requests|
+|user_details|Allows you to view the user's email address|
+|manage_bot|Allows you to view/edit the user's options and enable and disable the bot|
+|manage_commands|Allows you to add, edit, and remove the user's commands|
+|manage_xp|Allows you to ban the user's viewers or manage their XP counts|
+|manage_songs|Allows you to add, delete, and promote song requests|
 
 
 ### Authenticated Requests
