@@ -11,7 +11,7 @@ These are someone who has connected with Twitch on the NerdBot dashboard.
 Gets a user's bot options. Some details will be hidden without a valid [access token](../authentication.md) with scope `user_details`.
 
 #### Example Request
-    GET https://api.nerdbot.tv/v2/users/1
+    GET https://api.nerdbot.tv/v2/users/test_user
 #### Example Response
 ```JSON
 {
@@ -57,7 +57,7 @@ xp_payout_length|yes|string|Interval between payouts.
 xp_for_song|yes|int|XP count required for a song request. 0 to disable.
 
 #### Example Request
-    PATCH https://api.nerdbot.tv/v2/users/1
+    PATCH https://api.nerdbot.tv/v2/users/test_user
             volume=25
             &timer_length=PT1H
 #### Example Response
