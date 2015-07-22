@@ -11,7 +11,7 @@ Endpoint|Description
 ## `GET /users/:user/songs`
 Gets the song queue of `:user`.
 #### Example Request
-    GET https://api.nerdbot.tv/v2/users/1/songs
+    GET https://api.nerdbot.tv/v2/users/test_user/songs
 #### Example Response
     [
       {
@@ -29,7 +29,7 @@ Gets the song queue of `:user`.
 ## `GET /users/:user/songs/:song`
 Gets a song (from its ID, `:song`) from the queue.
 #### Example Request
-    GET https://api.nerdbot.tv/v2/users/1/songs/2935
+    GET https://api.nerdbot.tv/v2/users/test_user/songs/2935
 #### Example Response
     {
       "id": 2935,
@@ -46,7 +46,7 @@ Gets a song (from its ID, `:song`) from the queue.
 ## `DELETE /users/:user/songs/:song`
 Deletes a song (from its ID, `:song`) from the queue.  Requires a valid [access token](../authentication.md) with scope `manage_songs`.
 #### Example Request
-    DELETE https://api.nerdbot.tv/v2/users/1/songs/2935
+    DELETE https://api.nerdbot.tv/v2/users/test_user/songs/2935
 > You will receive an empty body and a 204 No Content response.
     
 ## `POST /users/:user/songs`
@@ -58,7 +58,7 @@ song|no|string|An identifier for the song (e.g. Soundcloud URL or YouTube Search
 from|yes|string|The name to show under `Added By`.
 
 #### Example Request
-    POST https://api.nerdbot.tv/v2/users/1/songs
+    POST https://api.nerdbot.tv/v2/users/test_user/songs
            song=be together wild belle
            &from=Test_User
 #### Example Response
