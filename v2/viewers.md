@@ -23,8 +23,8 @@ Updates stats for the `:viewer` of `:user`. Requires a valid [access token](../a
 
 |Parameter|Optional|Type|Description|
 |---|---|---|---|
-|xp|yes|int|The total XP points of the viewer|
-|time_watched|yes|bool|The time the viewer has watched user's channel|
+|xp|yes|int|The total XP points of `:viewer`|
+|time_watched|yes|bool|The time `:viewer` has watched `:user`'s channel|
 
 #### Example Request
     PATCH https://api.nerdbot.tv/v2/users/test_user/viewers/test_viewer
@@ -37,7 +37,7 @@ Updates stats for the `:viewer` of `:user`. Requires a valid [access token](../a
       "time_watched": "PT5H25M"
     }
 ## `DELETE /users/:user/viewers/:viewer`
-Resets stats for the `:viewer` of `:user`. Requires a valid [access token](../authentication.md) with scope `manage_xp`.
+Resets XP and time watched for `:viewer`. Requires a valid [access token](../authentication.md) with scope `manage_xp`.
 
 #### Example Request
     DELETE https://api.nerdbot.tv/v2/users/test_user/viewers/test_viewer
