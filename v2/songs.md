@@ -50,16 +50,16 @@ Deletes a song (from its ID, `:song`) from the queue.  Requires a valid [access 
 > You will receive an empty body and a 204 No Content response.
     
 ## `POST /users/:user/songs`
-Resets stats for the `:viewer` of `:user`. Requires a valid [access token](../authentication.md) with scope `manage_songs`.
+Adds a song to the song queue of `:user`. Requires a valid [access token](../authentication.md) with scope `manage_songs`.
 
 Parameter|Optional|Type|Description
 ---|---|---|---
-song|no|string|An identifier for the song (e.g. Soundcloud URL or YouTube Search term)
-from|yes|string|The name to show under `Added By`.
+id|no|string|The song (e.g. Soundcloud URL or YouTube Search term)
+from|yes|string|The name to show under `Added By`
 
 #### Example Request
     POST https://api.nerdbot.tv/v2/users/test_user/songs
-           song=be together wild belle
+           id=be together wild belle
            &from=Test_User
 #### Example Response
 ```JSON
