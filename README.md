@@ -12,7 +12,7 @@ All responses are formatted in JSON by default. All requests to `api.nerdbot.tv`
 ## Dates, Times, and Intervals
 All dates, times, and intervals are in ISO 8601 format with UTC times. You can read the full standards [here](https://en.wikipedia.org/wiki/ISO_8601), but here's the TL;DR:
 
-Human|ISO 8601
+Human (UTC)|ISO 8601
 ---|---
 July 15, 2015 6AM|2015-07-15T06:00Z
 2PM|14:00
