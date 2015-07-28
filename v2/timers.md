@@ -6,7 +6,7 @@ Endpoint|Description
 [GET /users/:user/timers](#get-usersusertimers)|Gets all timers for `:user`
 [GET /users/:user/timers/:id](#get-usersusertimersid)|Gets the timer `:id` from `:user`
 [POST /users/:user/timers](#post-usersusertimers)|Adds a timer for `:user`
-[DELETE /users/:user/timers/:id](#delete-usersusertimersname)|Deletes the timer `:id` from `:user`
+[DELETE /users/:user/timers/:id](#delete-usersusertimersid)|Deletes the timer `:id` from `:user`
 
 ## `GET /users/:user/timers`
 Gets all timers for `:user`. Timer variables will be masked without a valid [access token](../authentication.md) with scope `manage_timers`.
