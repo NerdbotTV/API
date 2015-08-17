@@ -53,25 +53,25 @@ enabled|yes|bool|Enables the bot for the user
 volume|yes|int|Volume of song requests (0-100)
 timer_length|yes|string|Length between timers in ISO-8601 interval format
 thank_followers|yes|bool|Enables "thank you" messages for new followers
-timeout_notice_type|yes|string|Where to put timeout notices (`chat`, `whisper`, or `none`.)
+timeout_notice_type|yes|string|Where to put timeout notices (`chat`, `whisper`, or `none`)
 timeout_length|yes|string|The length of the timeout in ISO-8601 interval format.
 sub_message|yes|string|Message sent upon new subscribers.
 resub_message|yes|string|Message sent upon a subscriber's monthly anniversary
 max_caps|yes|int|How many capital letters may be used in a row
 max_emotes|yes|int|How many emotes may be used in a message
-allow_links|yes|string|Who can post links (`all`, `subs`, or just `mods`.)
+allow_links|yes|string|Who can post links (`all`, `subs`, or just `mods`)
 use_points|yes|bool|Enabled the payouts of points to viewers
 points_command|yes|string|The command used for the points system
 points_singular|yes|string|Singular name of the points
 points_plural|yes|string|Plural name of the points
 points_payout|yes|int|How many points is paid out
 points_payout_length|yes|string|Time between payouts
-points_for_song|yes|int|XP count required for a song request. 0 to disable.
-use_song_filter|yes|bool|Enables the global song filter. **Changing soon!**
-max_requests|yes|int|Max amount of song requests per requester.
-topic|yes|string|The channel's topic.
-topic_static|yes|string|Appended to the channel's topic.
-topic_status|yes|bool|Enables the stream title in the channel's topic.
+points_for_song|yes|int|XP count required for a song request. 0 to disable
+use_song_filter|yes|bool|Enables the global song filter (**changing soon!**)
+max_requests|yes|int|Max amount of song requests per requester
+topic|yes|string|The channel's topic
+topic_static|yes|string|Appended to the channel's topic
+topic_status|yes|bool|Enables the stream title in the channel's topic
 list_commands|yes|bool|Enables the command list at `nerdbot.tv/commands/test_user`
 
 #### Example Request
