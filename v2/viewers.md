@@ -15,7 +15,7 @@ Gets the `:viewer` of `:user`. Requires a valid [access token](../authentication
     {
       "name": "test_viewer",
       "display_name": "Test_Viewer",
-      "xp": 1000,
+      "points": 1000,
       "time_watched": "PT5H20M"
     }
 ## `PATCH /users/:user/viewers/:viewer`
@@ -23,7 +23,7 @@ Updates stats for the `:viewer` of `:user`. Requires a valid [access token](../a
 
 |Parameter|Optional|Type|Description|
 |---|---|---|---|
-|xp|yes|int|The total XP points of `:viewer`|
+|points|yes|int|The total points of `:viewer`|
 |time_watched|yes|bool|The time `:viewer` has watched `:user`'s channel|
 
 #### Example Request
@@ -33,12 +33,6 @@ Updates stats for the `:viewer` of `:user`. Requires a valid [access token](../a
     {
       "name": "test_viewer",
       "display_name": "Test_Viewer",
-      "xp": 1000,
+      "points": 1000,
       "time_watched": "PT5H25M"
     }
-## `DELETE /users/:user/viewers/:viewer`
-Resets XP and time watched for `:viewer`. Requires a valid [access token](../authentication.md) with scope `manage_xp`.
-
-#### Example Request
-    DELETE https://api.nerdbot.tv/v2/users/test_user/viewers/test_viewer
-> You will receive an empty body and a `204 No Content` response.
