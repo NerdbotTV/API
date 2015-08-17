@@ -29,10 +29,19 @@ Gets a user's bot options. Some details will be hidden without a valid [access t
   "max_caps": 0,
   "max_emotes": 0,
   "allow_links": "subs",
-  "xp_enabled": true,
-  "xp_payout": 10,
-  "xp_payout_length": "PT5M",
-  "xp_for_song": 20
+  "use_points": true,
+  "points_command": "!coins",
+  "points_singular": "Coin",
+  "points_plural": "Coins",
+  "points_payout": 10,
+  "points_payout_length": "PT5M",
+  "points_for_song": 20,
+  "use_song_filter": true,
+  "max_requests": 3,
+  "topic": "Welcome to the channel!",
+  "topic_static": "Follow me on Twitter! https://twitter.com/RtaincCo",
+  "topic_status": true,
+  "list_commands": true
 }
 ```
 ## `PATCH /users/:user`
@@ -40,10 +49,10 @@ Sets option(s) for a user. Requires a valid [access token](../authentication.md)
 
 |Parameter|Optional|Type|Description|
 ---|---|---|---
+enabled|yes|bool|Enables the bot for the user
 volume|yes|int|Volume of song requests (0-100)
-enabled|yes|bool|Whether or not the bot is enabled for the user
 timer_length|yes|string|Length between timers in ISO-8601 interval format
-thank_followers|yes|bool|Whether or not new followers should be thanked in chat
+thank_followers|yes|bool|Enables "thank you" messages for new followers
 timeout_notice_type|yes|string|Where to put timeout notices (`chat`, `whisper`, or `none`.)
 timeout_length|yes|string|The length of the timeout in ISO-8601 interval format.
 sub_message|yes|string|Message sent upon new subscribers.
@@ -51,10 +60,19 @@ resub_message|yes|string|Message sent upon a subscriber's monthly anniversary
 max_caps|yes|int|How many capital letters may be used in a row
 max_emotes|yes|int|How many emotes may be used in a message
 allow_links|yes|string|Who can post links (`all`, `subs`, or just `mods`.)
-xp_enabled|yes|bool|Whether or not users gain XP.
-xp_payout|yes|int|How much XP is paid out.
-xp_payout_length|yes|string|Interval between payouts.
-xp_for_song|yes|int|XP count required for a song request. 0 to disable.
+use_points|yes|bool|Enabled the payouts of points to viewers
+points_command|yes|string|The command used for the points system
+points_singular|yes|string|Singular name of the points
+points_plural|yes|string|Plural name of the points
+points_payout|yes|int|How many points is paid out
+points_payout_length|yes|string|Time between payouts
+points_for_song|yes|int|XP count required for a song request. 0 to disable.
+use_song_filter|yes|bool|Enables the global song filter. **Changing soon!**
+max_requests|yes|int|Max amount of song requests per requester.
+topic|yes|string|The channel's topic.
+topic_static|yes|string|Appended to the channel's topic.
+topic_status|yes|bool|Enables the stream title in the channel's topic.
+list_commands|yes|bool|Enables the command list at `nerdbot.tv/commands/test_user`.
 
 #### Example Request
     PATCH https://api.nerdbot.tv/v2/users/test_user
