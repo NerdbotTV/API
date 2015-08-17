@@ -66,7 +66,7 @@ points_singular|yes|string|Singular name of the points
 points_plural|yes|string|Plural name of the points
 points_payout|yes|int|How many points is paid out
 points_payout_length|yes|string|Time between payouts
-points_for_song|yes|int|XP count required for a song request. 0 to disable
+points_for_song|yes|int|Points required for a song request. 0 to disable
 use_song_filter|yes|bool|Enables the global song filter (**changing soon!**)
 max_requests|yes|int|Max amount of song requests per requester
 topic|yes|string|The channel's topic
