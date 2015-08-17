@@ -72,7 +72,7 @@ max_requests|yes|int|Max amount of song requests per requester.
 topic|yes|string|The channel's topic.
 topic_static|yes|string|Appended to the channel's topic.
 topic_status|yes|bool|Enables the stream title in the channel's topic.
-list_commands|yes|bool|Enables the command list at `nerdbot.tv/commands/test_user`.
+list_commands|yes|bool|Enables the command list at `nerdbot.tv/commands/test_user`
 
 #### Example Request
     PATCH https://api.nerdbot.tv/v2/users/test_user
