@@ -27,7 +27,7 @@ Updates stats for the `:viewer` of `:user`. Requires a valid [access token](../a
 
 #### Example Request
     PATCH https://api.nerdbot.tv/v3/users/test_user/viewers/test_viewer
-            time_watched=PT19500S
+            timeWatched=PT19500S
 #### Example Response
     {
       "name": "Test_Viewer",
