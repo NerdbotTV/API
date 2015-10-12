@@ -3,9 +3,6 @@ The Nerdbot API is a feature-rich and constantly expanding way to manage a Nerdb
 
 Base URL: https://api.nerdbot.tv/v3/
 
-## Pretty Print
-By default, all responses use JSON Pretty Print for human readability. To make faster API calls in production, we recommend adding `?pretty=false` to all URLs. In `v3`, pretty printing is now off by default.
-
 ## Request Format
 Any POST/PUT/PATCH parameters can be sent in JSON or form-encoding. For example, the following two bodies are identical:
 
