@@ -37,11 +37,11 @@ Adds a timer for `:user`. Requires a valid [access token](../authentication.md) 
 
 Parameter|Optional|Type|Description
 ---|---|---|---
-message|no|string|The timer's message
+text|no|string|The timer's text
 
 #### Example Request
     POST https://api.nerdbot.tv/v3/users/test_user/timers
-          message=This is the second test
+           text=This is the second test
 #### Example Response
     {
       "id": 137,
