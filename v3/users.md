@@ -86,7 +86,7 @@ notices[follower]|yes|string|Message to send upon a new follower
 #### Example Request
     PATCH https://api.nerdbot.tv/v3/users/test_user
             songs[volume]=25
-            &timer_length=PT1H
+            &timerInterval=PT60M
 #### Example Response
 ```JSON
 {
