@@ -25,7 +25,7 @@ Gets all commands for `:user`. Command variables will be masked without a valid 
     ]
 
 ## `GET /users/:user/commands/:name`
-Gets the command `:name` from `:user`. Command variables will be masked without a valid [access token](../authentication.md) with scope `manage_commands`.
+Gets the command `:name` from `:user`. Command variables will be masked without a valid [access token](../authentication.md) with scope `commands`.
 
 #### Example Request
     GET https://api.nerdbot.tv/v3/users/test_user/commands/!test
@@ -38,7 +38,7 @@ Gets the command `:name` from `:user`. Command variables will be masked without 
     }
 
 ## `PUT /users/:user/commands/:name`
-Adds the command `:name` to `:user`. Requires a valid [access token](../authentication.md) with scope `manage_commands`.
+Adds the command `:name` to `:user`. Requires a valid [access token](../authentication.md) with scope `commands`.
 
 Parameter|Optional|Type|Description
 ---|---|---|---
