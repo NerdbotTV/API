@@ -13,7 +13,7 @@ and
     songs[volume]=50
 
 ## Response Format
-All responses are formatted in JSON. All requests to `api.nerdbot.tv` have CORS support; we have no immediate plan to implement JSONP support.
+All responses are formatted in JSON. All requests to `api.nerdbot.tv` have CORS and JSONP support through the `?callback=` parameter.
 
 ## Dates, Times, and Intervals
 All dates, times, and intervals are in ISO 8601 format with UTC times. You can read the full standards [here](https://en.wikipedia.org/wiki/ISO_8601), but here's the TL;DR:
