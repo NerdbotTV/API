@@ -3,8 +3,7 @@ NerdBot uses OAuth2 for authentication. All requests follow the exact OAuth2 sta
 
 ## Making an app
 To make authenticated requests, you must first [make an app](https://nerdbot.tv/api/apps/new).
-Once you create an app, copy your client ID and generate a secret.
-Make sure to copy the secret somewhere safe and **keep it private**.
+Once you create an app, copy your client ID.
 
 |App Parameter|Description|
 |---|---|
@@ -35,7 +34,6 @@ To use the Authorization Code Flow, follow these steps:
   
         POST https://api.nerdbot.tv/oauth2/token
                client_id=[your app's client ID]
-               &client_secret=[your app's client secret]
                &grant_type=authorization_code
                &code=[code received from authorization]
     > The `state` parameter is again supported here.
