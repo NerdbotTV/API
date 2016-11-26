@@ -24,7 +24,7 @@ Gets a user's info. Some details will be hidden without a valid [access token](.
     "twitch_login": {
         "name": "RtaincsBot",
         "token": "FJ87fefJHH833fjeEFk9343JJF3"
-    }
+    },
     "timers": {
         "sets": {
             "default": {
