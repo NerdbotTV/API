@@ -8,7 +8,7 @@ These are people who have signed in on the Nerdbot dashboard.
 |[PATCH /users/:id](#patch-usersid)|Updates a user's info|
 
 ## `GET /users/:id`
-Gets a user's info. Some details will be hidden without a valid [access token](../authentication.md) with scope `user_info`.
+Gets a user's info. Some details will be hidden without a valid [access token](../authentication.md) with scope `view_user`.
 
 #### Example Request
     GET https://api.nerdbot.tv/v3/users/2454512
@@ -16,8 +16,11 @@ Gets a user's info. Some details will be hidden without a valid [access token](.
 ```JSON
 {
     "id": 2454512,
-    "names": {
-        "twitch": "rtainc"
+    "sites": {
+        "twitch": {
+            "id": 37802347,
+            "name": "rtainc"
+        }
     },
     "mode": "on",
     "twitch_token": "J1qK1c18UUGJFAzz9xnH56584l4",
@@ -37,7 +40,7 @@ Gets a user's info. Some details will be hidden without a valid [access token](.
         "min_lines": 5
     },
     "song_requests": {
-        "allow_requests_from": ["mods", "subs"],
+        "allow_from": ["moderators", "subscribers"],
         "volume": 50,
         "filter_mode": "strict",
         "max_requests_per_user": 3,
@@ -47,13 +50,13 @@ Gets a user's info. Some details will be hidden without a valid [access token](.
         "max_caps": 8,
         "max_emotes": 8,
         "notice_type": "chat",
-        "allow_links_from": "mods",
+        "allow_links_from": [],
         "ignore_subs": false
     }
 }
 ```
 ## `PATCH /users/:user`
-Sets option(s) for a user. Requires a valid [access token](../authentication.md) with scope `editUser`.
+Sets option(s) for a user. Requires a valid [access token](../authentication.md) with scope `edit_user`.
 
 |Parameter|Optional|Type|Description|
 ---|---|---|---
@@ -61,7 +64,7 @@ Sets option(s) for a user. Requires a valid [access token](../authentication.md)
 #### Example Request
     PATCH https://api.nerdbot.tv/v3/users/2454512
             song_requests[volume]=25
-            &timers[default[interval]]=PT60M
+            &timers[sets][default][interval]=PT60M
 #### Example Response
 ```JSON
 {
