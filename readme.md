@@ -2,6 +2,7 @@
 The Nerdbot API is a feature-rich and constantly expanding way to manage a Nerdbot instance remotely. The current and supported version is `v5`. It is a ground-up rewrite of the API with improved stability, security, and style. `v3` has been deprecated and will be removed soon.
 
 Base URL: https://api.nerdbot.tv/5/
+
 All API calls must be over SSL (https).
 
 ## Request Format
