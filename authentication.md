@@ -66,15 +66,12 @@ To use the Implicit Grant Flow (e.g. for JavaScript-only apps), follow these ste
         
   You may now use the access token to make [Authenticated Requests](#authenticated-requests).
   
-### Scopes (v3)
+### Scopes (v5)
 |Scope|Description|
 |---|---|
-info|View the user's email address, logs, and managers
-manage|Edit bot options, enable/disable the bot
-commands|Add, edit, and remove the user's commands
-points|Manage the points of the user's viewers
-songs|Add, delete, and manage the user's song requests
-timers|Add, delete, and edit the user's timers
+view_user|View the user's email and bot login info
+edit_settings|Edit the user's bot settings
+edit_commands|Add, update, and delete the user's commands
 
 
 ### Authenticated Requests
@@ -82,8 +79,8 @@ Once you have an access token, you may make authenticated requests on behalf of 
 To do so, you can provide the token in two ways:
 
 #### In the URI
-    GET https://api.nerdbot.tv/v3?access_token=[token]
+    GET https://api.nerdbot.tv/5/?access_token=[token]
 
 #### In the headers
-    GET https://api.nerdbot.tv/v3
+    GET https://api.nerdbot.tv/5/
         Authorization: Bearer [token]
