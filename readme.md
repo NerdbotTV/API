@@ -1,7 +1,8 @@
 # Nerdbot API
-The Nerdbot API is a feature-rich and constantly expanding way to manage a Nerdbot instance remotely. The current and supported version is `v3`. All API calls must be over SSL (https).
+The Nerdbot API is a feature-rich and constantly expanding way to manage a Nerdbot instance remotely. The current and supported version is `v5`. It is a ground-up rewrite of the API with improved stability, security, and style. `v3` has been deprecated and will be removed soon.
 
-Base URL: https://api.nerdbot.tv/v3/
+Base URL: https://api.nerdbot.tv/5/
+All API calls must be over SSL (https).
 
 ## Request Format
 Any POST/PUT/PATCH parameters can be sent in JSON or form-encoding. For example, the following two bodies are identical:
@@ -25,10 +26,8 @@ July 15, 2015 6AM|2015-07-15T06:00Z
 60 minutes|PT1H *or* PT60M
 
 ## Error Format
-Errors in `v2` and `v3` are formatted as
+Errors in `v5` are formatted as the following, with the HTTP status code stating the general error type (e.g. 404 Not Found).
 
     {
-      "status": 401,
-      "error": "Unauthorized",
-      "message": "Missing token or invalid scope"
+      "error": "Message about the error"
     }
