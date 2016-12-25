@@ -52,7 +52,12 @@ Gets a user's info. Some details will be hidden without a valid [access token](.
         "notice_type": "chat",
         "allow_links_from": [],
         "ignore_subs": false
-    }
+    },
+    "plus": {
+        "active": true
+        "profile": "EJ-JIe8fh3hfJFk",
+        "started": "2017-01-01",
+        "months_left": 0
 }
 ```
 ## `PATCH /users/:user`
