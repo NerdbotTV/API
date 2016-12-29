@@ -69,9 +69,9 @@ To use the Implicit Grant Flow (e.g. for JavaScript-only apps), follow these ste
 ### Scopes (v5)
 |Scope|Description|
 |---|---|
-view_user|View the user's email and bot login info
-edit_settings|Edit the user's bot settings
+edit_user|View the user's email and edit their settings
 edit_commands|Add, update, and delete the user's commands
+edit_viewers|Manage the viewer's economy
 
 
 ### Authenticated Requests
